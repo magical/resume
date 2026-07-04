@@ -33,12 +33,10 @@
   tr.header td span { font-weight: normal; }
   td { padding: 0; }
 
-  ul { padding-left: 3.3em; }
-  li { list-style: none; }
-  li::before { content: "\01f4be"; padding-right: 1em; margin-left: -2.3em; }
+  ul ul > li { list-style: circle; }
 
   @media screen {
-    body { max-width: 8in; }
+    body { max-width: 8.5in; }
     .printonly { display: none; }
   }
   @media print {
@@ -58,67 +56,55 @@
   <address>&lt;andrew <i>dot</i> ekstedt <span aria-hidden=true style="display: none">nospam</span> <i>at</i> gmail <i>dot</i> com&gt;</address>
 </header>
 
-<h2>Education</h2>
-<table>
-  <tr class=header>
-    <td>Oregon State University
-      · <a href="http://oregonstate.edu/">oregonstate.edu</a>
-    <td>2014-2019
-  <tr><td colspan=2>
-    <ul>
-      <li><strong>BS Computer Science</strong> (Security Option),
-        Graduated: <strong>December 2019</strong>,
-        GPA: <strong>3.90</strong>.
-      <li>Relevant coursework:
-        Defense against the Dark Arts,
-        Network Security,
-        Cryptography,
-        Parallel Programming,
-        Translators,
-        Linear Algebra I.
-      <li>Capstone project: “Security-preserving cloud, email, and password systems”.
-    </ul>
-  <tr class=header>
-    <td>Independent study
-  <tr><td colspan=2>
-    <ul>
-      <li><a class=printurl href="https://www.edx.org/course/ricex/ricex-elec301x-discrete-time-signals-1032">Discrete Time Signals and Systems</a>.
-          RiceX ELEC301x.
-          Grade: <strong>98%</strong>.
-          (Fall 2014)
-      <li><a class=printurl href="https://www.udacity.com/course/cs271">Introduction to Artificial Intelligence</a>.
-          Groundbreaking online class taught by Stanford Research Professor Sebastian Thrun and Google Director of Research Peter Norvig.
-          Grade: <strong>99.7%</strong>.
-          (Fall 2011)
-    </ul>
-</table>
+
+
 
 <h2>Work</h2>
 
 <table>
+  <tr class=header><td>
+    Software Engineer
+    <td>2020-2025
+  <tr>
+    <td colspan=2>
+    Siemens EDA (formerly Mentor Graphics)
+    · <a href="https://eda.sw.siemens.com/en-US/">siemens.com</a>
+  <tr><td colspan=2>
+    <ul>
+    <li>Developed Calibre MATE as the <strong>primary maintainer for 4½ years</strong>,
+    taking it from a <strong>prototype to an integrated part of the product</strong> and
+    spearheading some large enhancements and UX improvements.
+    (<strong>Python, Bash, TCL, C++</strong>)</li>
+    <li>Debugged a <strong>nightmare concurrency bug</strong> that was at the root of <strong>prominent issue for a major customer</strong>.
+    Developed an initial fix and handed off my detailed report (with reproduction steps) to the relevant team.
+    (<strong>C++, Valgrind</strong>)</li>
+    <li><strong>Trained 2 new hires for our team</strong> and co-mentored a MECOP intern who was offered an ongoing role at the end of internship.</li>
+    </ul>
+
   <tr class=header>
-    <td>Software Developer <span>(full-time internship, 6 months)</span>
+    <td>Software Developer
+    · Full-time internship
     <td>Summer-Fall 2018
   <tr><td colspan=2>
     Mentor, a Siemens Business
     · <a href="https://www.mentor.com/">mentor.com</a>
     <ul>
-      <li>Worked on Calibre, an integrated circuit verification tool, as part of the Optical Proximity Correction team (OPC)
-      <li>Added a feature to OPC to enable customers to write more complex rules (C++)
-      <li>Improved the responsiveness of an heavily-used build tracking tool by a factor of 10× (Perl)
+      <li>Added an expression parser to nmOPC, enabling customers to write more complex verification rules (<strong>C++, yacc</strong>)
+      <li>Improved the responsiveness of an essential build tracking tool by 10×. (<strong>Perl</strong>)
     </ul>
 
   <tr class=header>
-    <td>Software Developer <span>(full-time internship, 6 months)</span>
+    <td>Software Developer
+    · Full-time internship
     <td>Spring–Summer 2017
   <tr><td colspan=2>
     Datalogic
     · <a href="https://www.datalogic.com/">datalogic.com</a>
     <ul>
-      <li>Built a prototype for a new type of checkout scanning technology based on image recognition,
-        which was successfully <a href="https://www.youtube.com/watch?v=1u9RIut9uUg">demoed</a> at NRF (National Retail Federation)
-      <li>Measured the end-to-end performance of the system and optimized bottlenecks to meet our performance goals
-      <li>Tech: <a href="http://www.ros.org/">ROS</a>, <a href="https://opencv.org/">OpenCV</a>, <a href="https://orange.biolab.si/">Orange</a>, <a href="https://www.raspberrypi.org/">Raspberry Pis</a> (C++/Python/Bash)
+      <li>Built a prototype for a <strong>first-of-its-kind checkout scanning technology</strong> based on <strong>image recognition</strong>,
+        which was <a href="https://www.youtube.com/watch?v=1u9RIut9uUg">demoed</a> at NRF (National Retail Federation).
+      <li>Measured and analysed the end-to-end performance of the prototype and optimized bottlenecks to exceed our performance goals.
+      <li>Tech: <a href="http://www.ros.org/">ROS</a>, <a href="https://opencv.org/">OpenCV</a>, <a href="https://orange.biolab.si/">Orange</a>, <a href="https://www.raspberrypi.org/">Raspberry Pis</a> (<strong>C++/Python/Bash</strong>)
     </ul>
 
   <tr class=header>
@@ -129,79 +115,106 @@
     · Enterprise Computing Services
     · <a href="https://is.oregonstate.edu/ecs">is.oregonstate.edu/ecs</a>
     <ul>
-      <li>Worked on the <a href="https://is.oregonstate.edu/data-architecture">DATA</a> team,
-          building &amp; maintaining RESTful APIs for students and staff
+      <li>Worked on an <strong>Agile team</strong> which built &amp; maintained <strong>RESTful APIs</strong> for students and staff.
       <li>Designed, implemented, and tested an internal API to store sensitive data in an encrypted database
-      <li>Deployed a container-based continuous integration pipeline built around Jenkins, Ansible, and Docker
+          which was <strong>adopted by the university to protect student SSNs</strong>.
+      <li>Deployed a container-based continuous integration pipeline built around Jenkins, Ansible, and Docker.
     </ul>
 
+
+</table>
+
+<h2>Education</h2>
+<table>
   <tr class=header>
-    <td>Volunteer Computer Assistant
-    <td>2010-2015
+    <td>Oregon State University
+      · <a href="http://oregonstate.edu/">oregonstate.edu</a>
+  <tr class=header>
+    <td>
+      <strong>BS, Computer Science</strong> (Security Option)
   <tr><td colspan=2>
-    Corvallis-Benton County Public Library
-    · <a href="https://cbcpubliclibrary.net">cbcpubliclibrary.net</a>
     <ul>
-      <li>Performed regular updates and maintenance on staff laptops and catalog computers
-      <li>Helped transition from the old Joomla-based website to current Wordpress site
+      <li>Relevant coursework:
+        Mobile Development (Android),
+        Defense against the Dark Arts (Malware Defense and Analysis),
+        Network Security,
+        Cryptography,
+        Parallel Programming,
+        Translators (aka Parsers),
+        Linear Algebra I.
+      <li>Capstone project: “Security-preserving cloud, email, and password systems”.
+      <li>Leadership: <strong>President of the OSU Linux Users Group</strong> for two years.
+          Planned and organized weekly meetings, linux installfests, and events.
+    </ul>
+  <tr class=header>
+    <td>Independent study
+  <tr><td colspan=2>
+    <ul>
+      <li><a class=printurl href="https://www.edx.org/course/ricex/ricex-elec301x-discrete-time-signals-1032">Discrete Time Signals and Systems</a>.
+          RiceX ELEC301x.
+          (Fall 2014)
+      <li><a class=printurl href="https://www.udacity.com/course/cs271">Introduction to Artificial Intelligence</a>.
+          A <a href="https://en.wikipedia.org/w/index.php?title=Massive_open_online_course&oldid=1333010756#:~:text=In%20the%20fall%20of%202011%2C%20Stanford%20University%20launched%20three%20courses.%5B42%5D%20The%20first%20of%20those%20courses%20was%20Introduction%20Into%20AI%2C%20launched%20by%20Sebastian%20Thrun%20and%20Peter%20Norvig.">groundbreaking</a> online class taught by Stanford Research Professor Sebastian Thrun and Google Director of Research Peter Norvig.
+          (Fall 2011)
     </ul>
 </table>
 
-<br class="printonly">
 
-<h2>Projects</h2>
+
+
+<br class="printonly pagebreak">
+
+<h2>Selected Projects</h2>
 
 <table>
   <tr class=header>
     <td>Veekun (core contributor)
       · <a href="http://veekun.com/dex/pokemon/eevee">veekun.com</a>
       · <a href="https://github.com/veekun">github.com/veekun</a>
-    <td>2009-present
+    <td>2009-2020
   <tr><td colspan=2>
     Open source Pokémon database and online encyclopedia
     <ul>
-      <li>Reverse engineered the game ROMs to extract sprites and data
-      <li>Ported the website from the Pylons web framework to the Pyramid web framework
-      <li>Performed regular maintenance and issue gardening
-      <li>Tech: Python, Pyramid, Mako, SQLAlchemy, PostgreSQL
+      <li><strong>Reverse engineered game ROMs</strong> to extract sprites and data,
+          allowing us to provide <strong>more accurate information than competing sites</strong>.
+      <li>Ported the website from the Pylons web framework to the Pyramid web framework,
+          helping to facilitate the transition from Python 2 to Python 3.
+      <li>Tech: <strong>Python, Pyramid, Mako, SQLAlchemy, PostgreSQL</strong>
     </ul>
 
   <tr class=header>
-    <td>CHIPS.EXE
+    <td>CHIPS.EXE (main author)
       · <a href="https://github.com/veekun">github.com/magical/CHIPS.EXE</a>
-    <td>2014-present
+    <td>2014-2021
   <tr><td colspan=2>
     Disassembly of Chip's Challenge for Windows (1992)
     <ul>
-      <li>Analyzed and annotated thousands of lines of assembly, providing valuable insight to the game's speedrunning community
-      <li>Wrote tools for analyzing 16-bit NE executables
-      <li>Tech: x86 assembly, Go, awk, GHIDRA
+      <li>Analyzed and annotated thousands of lines of assembly, providing valuable insight to the game's speedrunning community.
+      <li>Wrote tools for analyzing 16-bit NE executables (an obscure transitional format between MZ and PE).
+      <li>Tech: <strong>x86 assembly, Go, awk, GHIDRA</strong>
     </ul>
 
   <tr class=header>
-    <td>Senior Capstone project
+    <td>OSU Senior Capstone project
        · <a href="https://github.com/osucloudcrypto/s2a">github.com/osucloudcrypto</a>
        </td>
     <td>2017-2018</td>
   <tr><td colspan=2>
     “Security-preserving cloud, email, and password systems”
     <ul>
-      <li>Implemented and tested a searchable encryption algorithm in C++
-      <li>Achieved sub-millisecond search time in a database of over 40,000 files
+      <li>Implemented and tested a searchable encryption algorithm in C++.
+      <li>Achieved sub-millisecond search time in a database of over 40,000 files.
     </ul>
 
   <tr class=header>
     <td colspan=2>Other projects
-      · see <a href="https://github.com/magical">github.com/magical</a>
+      · see <a href="https://github.com/magical?tab=repositories">github.com/magical</a>
   <tr><td colspan=2>
     <ul></ul>
+
 </table>
 
-<h2>Leadership</h2>
 
-<ul>
-  <li>President of the <strong>OSU Linux Users Group</strong> during the 2016-2017 and 2017-2018 school years.</li>
-</ul>
 
 <h2>Awards and Contests</h2>
 
@@ -210,16 +223,16 @@
       <strong>1<sup>st</sup> place</strong>, with Red Tuxedo.
       I was responsible for completing the crypto challenges.</li>
   <li><a href="https://is.oregonstate.edu/hackathon-3">OSU IT Hackathon 3.0</a> - <strong>Grand Prize</strong>.
-      Our team won the grand prize for our project, which overlayed course data on the campus map. (2018)</li>
-  <li>Stripe CTF3: Distributed Systems Edition. My rank: <strong>23 of ~7.5k</strong> participants. (2014)
-  <li>Stripe Capture the Flag 2.0: Web Security Edition. My rank: <strong>48 of ~16k</strong> participants. (2011)
+      My team won the grand prize for our project, which overlayed course data on the campus map. (2018)</li>
+  <li>Stripe CTF3: Distributed Systems Edition. Ranked <strong>23 of ~7.5k</strong> participants. (2014)
+  <li>Stripe Capture the Flag 2.0: Web Security Edition. Ranked <strong>48 of ~16k</strong> participants. (2011)
 </ul>
 
 <h2>Tech</h2>
 
 <ul>
-  <li>2+ years of industry experience, 10+ years of technical and open source experience
+  <li>5-7 years of industry experience, 15+ years of technical and open source experience
   <li>Skilled with Linux, Git, Vim, tmux
   <li>Proficient in C, Go, Python, Bash, SQL, and the HTML/CSS/JavaScript trifecta
-  <li>Familiarity with Ruby, Lua, Haskell, Scheme, x86 and ARM assembly, Rust, PHP, Perl, Prolog…
+  <li>Familiar with Ruby, Lua, Haskell, Scheme, x86 and ARM assembly, Rust, TCL, PHP, Perl, Prolog…
 </ul>
